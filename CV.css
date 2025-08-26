@@ -1,0 +1,69 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+/* Define the main container for the resume */
+.resume-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1; /* Ensure resume is above the background dates */
+}
+/* Style the profile picture and its container */
+.profile-pic-container {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Custom styling for the download button to make it stand out */
+.download-btn {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.download-btn:hover {
+    background-color: #2563eb;
+    transform: translateX(-50%) scale(1.05);
+}
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    /* Adjustments for inline dates on mobile */
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
